@@ -1,0 +1,52 @@
+,,,,,VecClass ,test1,,,
+,,,,,VecClass.h Initialization,26.4933,,,Initialization
+,,,,,VecClass.h Addition,1.1183,,,Addition
+,,,,,VecClass.h Subtraction,0.9708,,,Subtraction
+,,,,,VecClass.h Dot Product,0.9307,,,Dot Product
+,,,,,VecClass.h Cross Product,1.3128,,,Cross Product
+,,,,,VecClass.h Scalar Multiplication,1.1435,,,Scalar Multiplication
+,,,,,VecClass.h Negatation,0.9763,,,Negatation
+,,,,,VecClass.h Length,1.1458,,,Length
+,,,,,VecClass.h Normalize,1.8657,,,Normalize
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,VecClassPointers.h ,Average,,,
+,,,,,VecClassPointers.h Initialization,24.8171,,,Initialization
+,,,,,VecClassPointers.h Addition,0.9934,,,Addition
+,,,,,VecClassPointers.h Subtraction,1.1436,,,Subtraction
+,,,,,VecClassPointers.h Dot Product,0.9668,,,Dot Product
+,,,,,VecClassPointers.h Cross Product,1.0702,,,Cross Product
+,,,,,VecClassPointers.h Scalar Multiplication,1.1319,,,Scalar Multiplication
+,,,,,VecClassPointers.h Negatation,1.1984,,,Negatation
+,,,,,VecClassPointers.h Length,1.1708,,,Length
+,,,,,VecClassPointers.h Normalize,1.884,,,Normalize
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,VecStruct.h ,Average,,,
+,,,,,VecStruct.h Initialization,22.5963,,,Initialization
+,,,,,VecStruct.h Addition,1.2816,,,Addition
+,,,,,VecStruct.h Subtraction,0.9393,,,Subtraction
+,,,,,VecStruct.h Dot Product,0.9968,,,Dot Product
+,,,,,VecStruct.h Cross Product,0.9309,,,Cross Product
+,,,,,VecStruct.h Scalar Multiplication,1.0989,,,Scalar Multiplication
+,,,,,VecStruct.h Negatation,0.9962,,,Negatation
+,,,,,VecStruct.h Length,1.344,,,Length
+,,,,,VecStruct.h Normalize,1.7118,,,Normalize
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,Vec.h ,,,,
+,,,,,Vec.h Initialization,1206.2953,,,Initialization
+,,,,,Vec.h Addition,688.9037,,,Addition
+,,,,,Vec.h Subtraction,680.0199,,,Subtraction
+,,,,,Vec.h Dot Product,698.2637,,,Dot Product
+,,,,,Vec.h Cross Product,1036.2656,,,Cross Product
+,,,,,Vec.h Scalar Multiplication,2.5711,,,Scalar Multiplication
+,,,,,Vec.h Negatation,190.7488,,,Negatation
+,,,,,Vec.h Length,195.662,,,Length
+,,,,,Vec.h Normalize,191.9034,,,Normalize

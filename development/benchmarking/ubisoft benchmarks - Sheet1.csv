@@ -1,0 +1,38 @@
+VecClass ,Test 1,Test 2,Test 3,Test 4,Test 5,Average,,,
+VecClass.h Initialization,46.2678,49.4505,47.8767,57.0483,48.1175,49.75216,,,Initialization
+VecClass.h Addition,93.121,97.8217,94.9914,93.9073,95.1402,94.99632,,,Addition
+VecClass.h Subtraction,92.9496,94.4357,95.8377,94.4225,95.7637,94.68184,,,Subtraction
+VecClass.h Dot Product,93.372,93.5339,93.46,93.5075,93.988,93.57228,,,Dot Product
+VecClass.h Cross Product,93.1356,93.3426,93.663,93.892,93.5251,93.51166,,,Cross Product
+VecClass.h Scalar Multiplication,110.6427,110.0309,112.0574,111.7656,111.5504,111.2094,,,Scalar Multiplication
+VecClass.h Negatation,97.9439,97.6038,97.9928,97.438,97.2493,97.64556,,,Negatation
+VecClass.h Length,113.6948,114.5342,114.2359,113.4376,113.4707,113.87464,,,Length
+VecClass.h Normalize,157.1252,158.642,158.7082,158.3932,158.7371,158.32114,,,Normalize
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+VecClassPointers.h ,Test 1,Test 2,Test 3,Test 4,Test 5,Average,,,
+VecClassPointers.h Initialization,45.7477,45.4409,46.2402,45.8513,45.3495,45.72592,,,Initialization
+VecClassPointers.h Addition,94.7694,95.0848,95.2815,94.8936,94.9481,94.99548,,,Addition
+VecClassPointers.h Subtraction,95.118,96.4306,96.6234,94.4651,94.5931,95.44604,,,Subtraction
+VecClassPointers.h Dot Product,93.1149,93.9606,92.9793,93.3578,93.5687,93.39626,,,Dot Product
+VecClassPointers.h Cross Product,93.7553,93.4847,93.0684,92.9034,93.5502,93.3524,,,Cross Product
+VecClassPointers.h Scalar Multiplication,109.3077,109.1584,110.32,109.6945,110.8053,109.85718,,,Scalar Multiplication
+VecClassPointers.h Negatation,98.152,97.769,97.3904,97.6036,98.0271,97.78842,,,Negatation
+VecClassPointers.h Length,117.4636,128.3406,116.0695,121.6083,116.1517,119.92674,,,Length
+VecClassPointers.h Normalize,169.1984,169.566,170.4713,170.6324,168.7185,169.71732,,,Normalize
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+VecStruct.h ,Test 1,Test 2,Test 3,Test 4,Test 5,Average,,,
+VecStruct.h Initialization,45.9158,45.7074,47.6672,46.1398,45.9476,46.27556,,,Initialization
+VecStruct.h Addition,96.155,95.7248,97.0166,98.3551,95.4028,96.53086,,,Addition
+VecStruct.h Subtraction,96.246,96.8683,96.7726,100.627,99.8814,98.07906,,,Subtraction
+VecStruct.h Dot Product,98.7596,94.1684,94.9556,94.1861,99.7873,96.3714,,,Dot Product
+VecStruct.h Cross Product,94.6033,93.6295,94.2961,93.7915,93.6077,93.98562,,,Cross Product
+VecStruct.h Scalar Multiplication,110.0795,110.1747,115.1021,109.6747,109.8591,110.97802,,,Scalar Multiplication
+VecStruct.h Negatation,100.4339,97.8528,98.9856,99.1351,101.9417,99.66982,,,Negatation
+VecStruct.h Length,125.3715,124.2268,132.8517,125.3278,127.0825,126.97206,,,Length
+VecStruct.h Normalize,166.0943,167.1306,174.5096,165.7563,166.5088,167.99992,,,Normalize
