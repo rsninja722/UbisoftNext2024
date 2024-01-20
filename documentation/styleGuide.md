@@ -8,7 +8,6 @@ Influence was drawn from the following sources:
 
 - provided API code
 - [Google c++ style guide](https://google.github.io/styleguide/cppguide.html)
-- [CppCon 2014: Jeff Preshing "How Ubisoft Develops Games for Multicore - Before and After C++11"](https://www.youtube.com/watch?v=X1T3IQ4N-3g)
 - [CppCon 2014: Nicolas Fleury "C++ in Huge AAA Games"](https://www.youtube.com/watch?v=qYN6eduU06s)
 
 ## formatting
@@ -80,3 +79,44 @@ each .h file should include a header guard with the following format
 
 #endif  // PROJECT_PATH_FILE_H_
 ```
+
+## post vs pre increment/decrement
+
+always use pre increment/decrement unless it is necessary to use post increment/decrement
+
+## classes vs. struts
+
+use a struct only for passive objects that carry data, everything else is a class
+
+## notes from Ubisoft c++ presentation
+
+### RTTI
+
+avoid using `typeid` and `dynamic_cast` (to control the memory overhead)
+
+### exception handling
+
+avoid using, sometimes has a runtime cost, has a cost for compilation time, use static analysis instead
+
+### performance
+
+- keep in mind the hardware hierarchy: cpu, l1 cache, l2 cache, l3 cache, ram, hdd
+- try to access data sequentially
+- avoid reading/writing frequently to variables outside the most local scope, example:
+
+```c++
+// slow
+for (int i = 0; i < count; ++i) 
+{
+    m_total += values[i];
+}
+
+// fast
+int64_t total = 0;
+for (int i = 0; i < count; ++i)
+{
+    total += values[i];
+}
+m_total = total;
+```
+

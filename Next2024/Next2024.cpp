@@ -8,11 +8,14 @@
 //------------------------------------------------------------------------
 #include "app\app.h"
 //------------------------------------------------------------------------
+#include "engine/Log.h"
+#include "engine/ECS/Entities.h"
+#include "ECSdefs/Shield.h"
 
 //------------------------------------------------------------------------
 // Eample data....
 //------------------------------------------------------------------------
-CSimpleSprite *testSprite;
+CSimpleSprite* testSprite;
 enum
 {
 	ANIM_FORWARDS,
@@ -22,11 +25,26 @@ enum
 };
 //------------------------------------------------------------------------
 
+Shield* shield;
+
+ShieldSystem ShieldSystemInstance;
+
+Manager<Shield, ShieldSystem, 1000> shieldManager(&ShieldSystemInstance);
+
 //------------------------------------------------------------------------
 // Called before first update. Do any initial setup here.
 //------------------------------------------------------------------------
 void Init()
 {
+
+	Log::Init();
+	Entities::Init();
+
+
+	entity shield = Entities::Create();
+
+	shieldManager.AddComponent(shield, Shield{ Vec3(100.0f, 100.0f, 0.0f), 20.0f, 255, 125, 0 });
+
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
 	testSprite = App::CreateSprite(".\\TestData\\Test.bmp", 8, 4);
@@ -46,6 +64,8 @@ void Init()
 //------------------------------------------------------------------------
 void Update(float deltaTime)
 {
+	shieldManager.UpdateAll(deltaTime);
+
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
 	testSprite->Update(deltaTime);
@@ -65,14 +85,14 @@ void Update(float deltaTime)
 		x -= 1.0f;
 		testSprite->SetPosition(x, y);
 	}
-    if (App::GetController().GetLeftThumbStickY() > 0.5f)
-    {
-        testSprite->SetAnimation(ANIM_FORWARDS);
-        float x, y;
-        testSprite->GetPosition(x, y);
-        y += 1.0f;
-        testSprite->SetPosition(x, y);
-    }
+	if (App::GetController().GetLeftThumbStickY() > 0.5f)
+	{
+		testSprite->SetAnimation(ANIM_FORWARDS);
+		float x, y;
+		testSprite->GetPosition(x, y);
+		y += 1.0f;
+		testSprite->SetPosition(x, y);
+	}
 	if (App::GetController().GetLeftThumbStickY() < -0.5f)
 	{
 		testSprite->SetAnimation(ANIM_BACKWARDS);
@@ -115,7 +135,8 @@ void Update(float deltaTime)
 // See App.h 
 //------------------------------------------------------------------------
 void Render()
-{	
+{
+	shieldManager.RenderAll();
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
 	testSprite->Draw();
@@ -137,13 +158,13 @@ void Render()
 	for (int i = 0; i < 20; i++)
 	{
 
-		float sx = 200 + sinf(a + i * 0.1f)*60.0f;
-		float sy = 200 + cosf(a + i * 0.1f)*60.0f;
-		float ex = 700 - sinf(a + i * 0.1f)*60.0f;
-		float ey = 700 - cosf(a + i * 0.1f)*60.0f;
+		float sx = 200 + sinf(a + i * 0.1f) * 60.0f;
+		float sy = 200 + cosf(a + i * 0.1f) * 60.0f;
+		float ex = 700 - sinf(a + i * 0.1f) * 60.0f;
+		float ey = 700 - cosf(a + i * 0.1f) * 60.0f;
 		g = (float)i / 20.0f;
 		b = (float)i / 20.0f;
-		App::DrawLine(sx, sy, ex, ey,r,g,b);
+		App::DrawLine(sx, sy, ex, ey, r, g, b);
 	}
 }
 //------------------------------------------------------------------------
@@ -151,7 +172,7 @@ void Render()
 // Just before the app exits.
 //------------------------------------------------------------------------
 void Shutdown()
-{	
+{
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
 	delete testSprite;
