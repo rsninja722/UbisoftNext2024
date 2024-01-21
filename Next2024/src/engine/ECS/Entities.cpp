@@ -20,5 +20,10 @@ entity Entities::Create()
 	return m_nextEntity;
 }
 
+unsigned int Entities::GetMaxEntities()
+{
+	return m_maxEntities;
+}
+
 entity Entities::m_maxEntities = 0;
 entity Entities::m_nextEntity = 0;

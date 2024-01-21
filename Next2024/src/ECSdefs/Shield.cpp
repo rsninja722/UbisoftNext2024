@@ -10,10 +10,11 @@
 
 void ShieldSystem::Update(Shield* comp, float deltaTime)
 {
-	comp->position += Vec3(1.0f, 0.0f, 0.0f);
+	comp->radius += sinf(deltaTime) * 0.1f;
 }
 
 void ShieldSystem::Render(Shield* comp)
 {
-	Log::Info("Shield at: " + std::to_string(comp->position.GetX()) + std::to_string(comp->position.GetY()) + std::to_string(comp->position.GetZ()));
+	float scale = comp->radius;
+	Render::RenderMesh(Render::m_shield, comp->color, comp->position, { scale, scale, scale }, { 0.0f, 0.0f, 0.0f });
 }

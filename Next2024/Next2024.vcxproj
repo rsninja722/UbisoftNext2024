@@ -180,7 +180,10 @@
     <ClInclude Include="App\SimpleController.h" />
     <ClInclude Include="App\SimpleSound.h" />
     <ClInclude Include="App\SimpleSprite.h" />
+    <ClInclude Include="src\ECSdefs\Base.h" />
+    <ClInclude Include="src\ECSdefs\City.h" />
     <ClInclude Include="src\ECSdefs\Shield.h" />
+    <ClInclude Include="src\ECSdefs\Sprite.h" />
     <ClInclude Include="src\engine\ECS\Component.h" />
     <ClInclude Include="src\engine\ECS\Manager.h" />
     <ClInclude Include="src\engine\ECS\System.h" />
@@ -190,10 +193,13 @@
     <ClInclude Include="src\engine\math\Vec2.h" />
     <ClInclude Include="src\engine\math\Vec3.h" />
     <ClInclude Include="src\engine\pools\Pool.h" />
+    <ClInclude Include="src\engine\render\LoadMesh.h" />
     <ClInclude Include="src\engine\render\Mesh.h" />
     <ClInclude Include="src\engine\render\Render.h" />
     <ClInclude Include="src\engine\render\Triangle.h" />
     <ClInclude Include="src\engine\ECS\Entities.h" />
+    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\Scenes.h" />
     <ClInclude Include="stb_image\stb_image.h" />
     <ClInclude Include="include\stdafx.h" />
     <ClInclude Include="include\targetver.h" />
@@ -207,16 +213,21 @@
     <ClCompile Include="Next2024.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="src\ECSdefs\Base.cpp" />
+    <ClCompile Include="src\ECSdefs\City.cpp" />
     <ClCompile Include="src\ECSdefs\Shield.cpp" />
+    <ClCompile Include="src\ECSdefs\Sprite.cpp" />
     <ClCompile Include="src\engine\Log.cpp" />
     <ClCompile Include="src\engine\math\Mat3.cpp" />
     <ClCompile Include="src\engine\math\Mat4.cpp" />
     <ClCompile Include="src\engine\math\Vec2.cpp" />
     <ClCompile Include="src\engine\math\Vec3.cpp" />
+    <ClCompile Include="src\engine\render\LoadMesh.cpp" />
     <ClCompile Include="src\engine\render\Mesh.cpp" />
     <ClCompile Include="src\engine\render\Render.cpp" />
     <ClCompile Include="src\engine\render\Triangle.cpp" />
     <ClCompile Include="src\engine\ECS\Entities.cpp" />
+    <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="stb_image\stb_image.cpp" />
     <ClCompile Include="include\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -8,6 +8,8 @@ public:
 	static void Init();
 
 	static entity Create();
+
+	static unsigned int GetMaxEntities();
 private:
 	static entity m_maxEntities;
 	static entity m_nextEntity;

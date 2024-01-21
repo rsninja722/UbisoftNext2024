@@ -1,5 +1,5 @@
 #ifndef NEXT2024_SRC_ENGINE_MATH_MAT4_H_
-#define NEXT2024_SRC_ENGINE_MATH_NAT4_H_
+#define NEXT2024_SRC_ENGINE_MATH_MAT4_H_
 
 #include "Vec3.h"
 
@@ -35,6 +35,8 @@ public:
 
 	// transposes this matrix
 	Mat4& Transpose();
+
+	std::string ToString() const;
 
 private:
 	std::array<float, 16> m_matrix;

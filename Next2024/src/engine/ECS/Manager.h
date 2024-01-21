@@ -7,6 +7,7 @@
 
 #include "stdafx.h"
 
+#include <unordered_map>
 #include "engine/ECS/Component.h"
 #include "engine/ECS/System.h"
 
@@ -39,6 +40,11 @@ public:
 
 	COMPONENT* GetComponent(entity entityID) {
 		return m_compManager.GetComponent(entityID);
+	}
+
+	std::unordered_map<entity, COMPONENT*>* GetAllComponents()
+	{
+		return &m_compManager.m_registry;
 	}
 
 	void RemoveComponent(entity entityID) {

@@ -6,11 +6,15 @@
 
 #include "Vec3.h"
 
-Vec3::Vec3() : m_x(0.0f), m_y(0.0f), m_z(0.0f)
+Vec3::Vec3() : m_x(0.0f), m_y(0.0f), m_z(0.0f), m_w(1.0f)
 {
 }
 
-Vec3::Vec3(float x, float y, float z) : m_x(x), m_y(y), m_z(z)
+Vec3::Vec3(float x, float y, float z) : m_x(x), m_y(y), m_z(z), m_w(1.0f)
+{
+}
+
+Vec3::Vec3(float x, float y, float z, float w) : m_x(x), m_y(y), m_z(z), m_w(w)
 {
 }
 
@@ -127,4 +131,9 @@ float Vec3::GetY() const
 float Vec3::GetZ() const
 {
 	return m_z;
+}
+
+float Vec3::GetW() const
+{
+	return m_w;
 }

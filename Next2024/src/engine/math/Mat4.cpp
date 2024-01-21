@@ -44,13 +44,13 @@ Mat4 Mat4::Scale(Vec3 vec)
 }
 
 Mat4 Mat4::LookAt(Vec3 eye, Vec3 target, Vec3 up) {
-	Vec3 f = (target - eye).Normalize();
-	Vec3 s = (f.CrossProduct(up)).Normalize();
-	Vec3 u = s.CrossProduct(f).Normalize();
+	Vec3 f = (target - eye).Normalize(); // forwards
+	Vec3 r = (f.CrossProduct(up)).Normalize();
+	Vec3 u = r.CrossProduct(f).Normalize();
 
-	return Mat4(s.GetX(), s.GetY(), s.GetZ(), -s.DotProduct(eye),
+	return Mat4(r.GetX(), r.GetY(), r.GetZ(), -r.DotProduct(eye),
 		u.GetX(), u.GetY(), u.GetZ(), -u.DotProduct(eye),
-		-f.GetX(), -f.GetY(), -f.GetZ(), f.DotProduct(eye),
+		-f.GetX(), -f.GetY(), -f.GetZ(), -f.DotProduct(eye),
 		0.0f, 0.0f, 0.0f, 1.0f);
 }
 
@@ -104,9 +104,10 @@ Mat4& Mat4::operator*=(const Mat4& mat)
 
 Vec3 Mat4::operator*(const Vec3& vec) const
 {
-	return Vec3(m_matrix[0] * vec.GetX() + m_matrix[1] * vec.GetY() + m_matrix[2] * vec.GetZ() + m_matrix[3] + m_matrix[4],
-		m_matrix[4] * vec.GetX() + m_matrix[5] * vec.GetY() + m_matrix[6] * vec.GetZ() + m_matrix[7] + m_matrix[8],
-		m_matrix[8] * vec.GetX() + m_matrix[9] * vec.GetY() + m_matrix[10] * vec.GetZ() + m_matrix[11] + m_matrix[12]);
+	return Vec3(m_matrix[0] * vec.GetX() + m_matrix[1] * vec.GetY() + m_matrix[2] * vec.GetZ() + m_matrix[3] * vec.GetW(),
+		m_matrix[4] * vec.GetX() + m_matrix[5] * vec.GetY() + m_matrix[6] * vec.GetZ() + m_matrix[7] * vec.GetW(),
+		m_matrix[8] * vec.GetX() + m_matrix[9] * vec.GetY() + m_matrix[10] * vec.GetZ() + m_matrix[11] * vec.GetW(),
+		m_matrix[12] * vec.GetX() + m_matrix[13] * vec.GetY() + m_matrix[14] * vec.GetZ() + m_matrix[15] * vec.GetW());
 }
 
 Mat4& Mat4::Transpose()
@@ -130,4 +131,16 @@ Mat4& Mat4::Transpose()
 	m_matrix[14] = temp[11];
 
 	return *this;
+}
+
+std::string Mat4::ToString() const
+{
+	std::string result = "Matrix: (";
+
+	for (int i = 0; i < 16; i++)
+	{
+		result += std::to_string(m_matrix[i]) + ", ";
+	}
+
+	return result + ") ";
 }

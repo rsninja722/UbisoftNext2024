@@ -7,6 +7,6 @@
 
 #include "Triangle.h"
 
-Triangle::Triangle(Vec3 v1, Vec3 v2, Vec3 v3, int r, int g, int b) : vertices{ v1, v2, v3 }, r(r), g(g), b(b)
+Triangle::Triangle(Vec3 v1, Vec3 v2, Vec3 v3) : m_v1(v1), m_v2(v2), m_v3(v3)
 {
 }

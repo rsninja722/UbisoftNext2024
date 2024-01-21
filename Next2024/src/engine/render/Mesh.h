@@ -3,13 +3,13 @@
 
 #include <vector>
 
+#include "engine/math/Mat4.h"
 #include "Triangle.h"
 
-class Mesh {
-public:
+struct Mesh {
+	std::vector<Triangle> m_triangles;
 
-private:
-	std::vector<Triangle> triangles;
+	Mesh(std::vector<Triangle> triangles);
 };
 
 

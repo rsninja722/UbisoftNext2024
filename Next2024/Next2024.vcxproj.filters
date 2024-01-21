@@ -31,6 +31,11 @@
     <ClCompile Include="src\engine\ECS\Entities.cpp" />
     <ClCompile Include="src\ECSdefs\Shield.cpp" />
     <ClCompile Include="src\engine\Log.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\engine\render\LoadMesh.cpp" />
+    <ClCompile Include="src\ECSdefs\Sprite.cpp" />
+    <ClCompile Include="src\ECSdefs\City.cpp" />
+    <ClCompile Include="src\ECSdefs\Base.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\stdafx.h" />
@@ -72,6 +77,12 @@
     <ClInclude Include="src\engine\ECS\System.h" />
     <ClInclude Include="src\engine\Log.h" />
     <ClInclude Include="src\engine\ECS\Manager.h" />
+    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\engine\render\LoadMesh.h" />
+    <ClInclude Include="src\ECSdefs\Sprite.h" />
+    <ClInclude Include="src\ECSdefs\City.h" />
+    <ClInclude Include="src\Scenes.h" />
+    <ClInclude Include="src\ECSdefs\Base.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="NextAPI">

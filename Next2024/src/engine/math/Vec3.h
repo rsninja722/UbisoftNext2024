@@ -9,6 +9,8 @@ public:
 
 	Vec3(float x, float y, float z);
 
+	Vec3(float x, float y, float z, float w);
+
 	// returns a new vector with the components added
 	Vec3 operator+(const Vec3& vec) const;
 
@@ -62,8 +64,9 @@ public:
 
 	float GetZ() const;
 
+	float GetW() const;
 private:
-	float m_x, m_y, m_z;
+	float m_x, m_y, m_z, m_w;
 };
 
 #endif  // NEXT2024_SRC_ENGINE_MATH_VEC3_H_
