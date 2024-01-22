@@ -1,0 +1,16 @@
+Log file created at Jan 21 2024 18:22:13
+[INFO] Initializing Game
+[INFO] Loading mesh from file: assets/city.obj
+[INFO] Successfully Loaded mesh from file: assets/city.obj
+[INFO] Loading mesh from file: assets/rocket.obj
+[INFO] Successfully Loaded mesh from file: assets/rocket.obj
+[INFO] Loading mesh from file: assets/shield.obj
+[INFO] Successfully Loaded mesh from file: assets/shield.obj
+[INFO] Loading mesh from file: assets/base.obj
+[INFO] Successfully Loaded mesh from file: assets/base.obj
+[INFO] Loading mesh from file: assets/terrain.obj
+[INFO] Successfully Loaded mesh from file: assets/terrain.obj
+[INFO] Loading mesh from file: assets/plane.obj
+[INFO] Successfully Loaded mesh from file: assets/plane.obj
+[INFO] Loading mesh from file: assets/target.obj
+[INFO] Successfully Loaded mesh from file: assets/target.obj
